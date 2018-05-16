@@ -1,5 +1,5 @@
 [![license](https://img.shields.io/github/license/herloct/docker-phpmetrics.svg)]()
-[![Build Status](https://travis-ci.org/herloct/docker-phpmetrics.svg?branch=master)](https://travis-ci.org/herloct/docker-phpmetrics)
+[![Build Status](https://travis-ci.org/2ur1st/docker-phpmetrics.svg?branch=master)](https://travis-ci.org/herloct/docker-phpmetrics)
 
 ## Supported tags and respective `Dockerfile` links
 
