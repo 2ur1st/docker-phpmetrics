@@ -39,10 +39,10 @@ after_success:
     docker push 2ur1st/phpmetrics:$PHP_METRICS_VERSION-$TRAVIS_BRANCH;
     fi
   - if [[ $TRAVIS_TAG ]]; then
-    docker tag 2ur1st/phpmetrics:$PHP_METRICS_VERSION-$TRAVIS_BRANCH herloct/phpmetrics:$PHP_METRICS_VERSION;
+    docker tag 2ur1st/phpmetrics:$PHP_METRICS_VERSION-$TRAVIS_BRANCH 2ur1st/phpmetrics:$PHP_METRICS_VERSION;
     docker push 2ur1st/phpmetrics:$PHP_METRICS_VERSION;
     fi
   - if [[ $TRAVIS_TAG ]] && [[ $IS_LATEST == 1 ]]; then
-    docker tag 2ur1st/phpmetrics:$PHP_METRICS_VERSION herloct/phpmetrics:latest;
+    docker tag 2ur1st/phpmetrics:$PHP_METRICS_VERSION 2ur1st/phpmetrics:latest;
     docker push 2ur1st/phpmetrics:latest;
     fi
