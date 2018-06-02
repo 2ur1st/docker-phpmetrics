@@ -1,4 +1,4 @@
-[![license](https://img.shields.io/github/license/herloct/docker-phpmetrics.svg)]()
+[![license](https://img.shields.io/github/license/2ur1st/docker-phpmetrics.svg)]()
 [![Build Status](https://travis-ci.org/2ur1st/docker-phpmetrics.svg?branch=master)](https://travis-ci.org/2ur1st/docker-phpmetrics)
 
 ## Supported tags and respective `Dockerfile` links
@@ -28,7 +28,7 @@ Basic usage using current user.
 docker run --rm \
     --user $(id -u):$(id -g) \
     --volume /local/path:/project \
-    herloct/phpmetrics[:tag] [<options>]
+    2ur1st/phpmetrics[:tag] [<options>]
 ```
 
 For example, to generate metrics of our `src` directory.
@@ -37,7 +37,7 @@ For example, to generate metrics of our `src` directory.
 docker run --rm \
     --user $(id -u):$(id -g) \
     --volume /local/path:/project \
-    herloct/phpmetrics --report-html=build/metrics src
+    2ur1st/phpmetrics --report-html=build/metrics src
 ```
 
 ## Volumes
