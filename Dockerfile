@@ -2,12 +2,15 @@ FROM php:7.1.3-alpine
 
 MAINTAINER herloct <herloct@gmail.com>
 
-ENV PHP_METRICS_VERSION=2.3.2
+ENV PHP_METRICS_VERSION=1.10.0
 
-RUN curl -L https://github.com/phpmetrics/PhpMetrics/releases/download/v$PHP_METRICS_VERSION/phpmetrics.phar > /usr/local/bin/phpmetrics \
-    && chmod +x /usr/local/bin/phpmetrics \
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+RUN curl -sL https://github.com/phpmetrics/PhpMetrics/archive/v${PHP_METRICS_VERSION}.tar.gz | tar xz
 
-    && rm -rf /var/cache/apk/* /var/tmp/* /tmp/*
+WORKDIR /PhpMetrics-${PHP_METRICS_VERSION}
+RUN composer install \
+	&& ln -s /PhpMetrics-${PHP_METRICS_VERSION}/bin/phpmetrics /usr/local/bin/phpmetrics \
+	&& rm -rf /var/cache/apk/* /var/tmp/* /tmp/*
 
 VOLUME ["/project"]
 WORKDIR /project
