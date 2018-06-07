@@ -7,6 +7,7 @@
 * [`2.2.0`](https://github.com/2ur1st/docker-phpmetrics/blob/2.2.0/Dockerfile)
 * [`2.1.0`](https://github.com/2ur1st/docker-phpmetrics/blob/2.1.0/Dockerfile)
 * [`2.0.0`](https://github.com/2ur1st/docker-phpmetrics/blob/2.0.0/Dockerfile)
+* [`1.10.0`](https://github.com/2ur1st/docker-phpmetrics/blob/1.10.0/Dockerfile)
 
 ## What is PhpMetrics?
 
